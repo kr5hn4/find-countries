@@ -20889,26 +20889,29 @@ function getCountry() {
     }]
 `);    //get("./countries.json")
         // var json_obj = JSON.parse(Get(yourUrl));
-        var country = document.getElementById("countryName").value;
-    for (var i = 0; i < countries.length; i++) {
-        if (country == countries[i].name.common) {
-          var tldv = document.getElementById("tldv");
-          var cca2v = document.getElementById("cca2v");
-          var callingCodev = document.getElementById("callingCodev");
-          var capitalv = document.getElementById("capitalv");
-          var regionv = document.getElementById("regionv");
-          var latitudeLongitudev = document.getElementById("latitudeLongitudev");
-          var isoCurrencyCodev = document.getElementById("isoCurrencyCodev");
-          var areav = document.getElementById("areav");
 
-          tldv.innerHTML = countries[i].tld;
-          cca2v.innerHTML = countries[i].cca2;
-          callingCodev.innerHTML = countries[i].callingCode;
-          capitalv.innerHTML = countries[i].capital;
-          regionv.innerHTML = countries[i].region;
-          latitudeLongitudev.innerHTML = countries[i].latlng;
-          isoCurrencyCodev.innerHTML = countries[i].currency;
-          areav.innerHTML = countries[i].area + " km<sup>2</sup>";
+        //get country details from json object...
+        var country = document.getElementById("countryName").value;
+        for (var i = 0; i < countries.length; i++) {
+            if (country == countries[i].name.common) {
+                var tldv = document.getElementById("tldv");
+                var cca2v = document.getElementById("cca2v");
+                var callingCodev = document.getElementById("callingCodev");
+                var capitalv = document.getElementById("capitalv");
+                var regionv = document.getElementById("regionv");
+                var latitudeLongitudev = document.getElementById("latitudeLongitudev");
+                var isoCurrencyCodev = document.getElementById("isoCurrencyCodev");
+                var areav = document.getElementById("areav");
+
+                //add the country details to the page
+                tldv.innerHTML = countries[i].tld;
+                cca2v.innerHTML = countries[i].cca2;
+                callingCodev.innerHTML = countries[i].callingCode;
+                capitalv.innerHTML = countries[i].capital;
+                regionv.innerHTML = countries[i].region;
+                latitudeLongitudev.innerHTML = countries[i].latlng;
+                isoCurrencyCodev.innerHTML = countries[i].currency;
+                areav.innerHTML = countries[i].area + " km<sup>2</sup>";
         }
     }
 

@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="main.js"></script>
     <style>
-      .bodybg{
-        background-color: #101010;
-        color: #e8e8e8;
-      }
+        @import url('https://fonts.googleapis.com/css?family=Vollkorn');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        .countriesinfo {
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
+
+        .pageheading {
+            font-family: 'Vollkorn', serif;
+            font-weight: bolder;
+            color: #e8e8e8;
+        }
+
+        .bodybg {
+            background-color: #101010;
+            font-family: 'Open Sans', sans-serif;
+        }
     </style>
 </head>
 
 <body class="bodybg">
 
-    <nav class="nav navbar text-center ">
-      <h2>Find your favourite countries:</h2>
+    <nav class="nav navbar text-center pageheading">
+        <h1>Find your favourite countries:</h1>
     </nav>
     <br>
-
     <!-- Main stuff -->
 
     <div class="container">
@@ -274,12 +286,13 @@
             <br>
             <br>
             <br>
-            <button class="btn btn-success btn-md col-sm-offset-5 col-sm-2" onclick="getCountry()">Find</button>
+            <button class="btn btn-primary btn-md col-sm-offset-5 col-sm-2" onclick="getCountry()">Find</button>
             <br>
             <br>
             <br>
             <br>
-            <div class="row col-sm-8 col-sm-offset-4">
+            <hr>
+            <div class="row col-sm-8 col-sm-offset-4 countriesinfo">
               <dl class="dl-horizontal">
                 <dt id="tld">Top level domain:</dt>
                 <dd id="tldv">...</dd>
